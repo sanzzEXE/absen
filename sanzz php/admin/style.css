@@ -1,0 +1,250 @@
+/* ======================================================
+   ============= GLOBAL STYLE (HALAMAN UTAMA) ============
+   ====================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #3d3c3c;
+    font-family: 'Poppins', sans-serif;
+
+    /* Background UTAMA - 1 gambar saja */
+    background: url(../images/pemandangan.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Container utama */
+.content {
+    width: 92%;
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+header h1.judul {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 26px;
+    color: #2a2a2a;
+}
+
+header h3.deskripsi {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
+
+/* MENU */
+.menu {
+    background: #0b6b5a;
+    padding: 5px 0;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0 6px;
+    margin: 0;
+    display: inline-flex;
+    gap: 6px;
+}
+
+.menu ul li a {
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+/* BADAN / ISI HALAMAN */
+.badan {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.halaman {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+/* ======================================================
+   ============= LOGIN ADMIN STYLE (KHUSUS) =============
+   ====================================================== */
+
+body.login-page {
+    /* Background login — tetap 1 gambar, tidak ganda */
+    background: url(../images/pemandangan.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* Pusatkan box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* Hapus margin/padding hal kecil biar benar2 tengah */
+    margin: 0;
+    padding: 0;
+}
+
+.login-box {
+    width: 320px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #0b6b5a;
+}
+
+.login-box label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 7px 0;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #0b6b5a;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background: #0d8c76;
+}
+
+.login-box .error {
+    background: #ffb5b5;
+    padding: 10px;
+    border-left: 5px solid red;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+/* ================================
+   FIX MENU FULL WIDTH (HIJAU FULL)
+   ================================ */
+.menu {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+}
+
+.menu ul li {
+    flex: 1; /* Biar semua item melebar rata */
+}
+
+.menu ul li a {
+    display: block;
+    text-align: center;
+    padding: 14px 0;
+    background: #0e8f6d;       /* warna hijau */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-right: 1px solid #0a7458;
+}
+
+.menu ul li:last-child a {
+    border-right: none;
+}
+
+.menu ul li a:hover {
+    background: #0b7a5d;
+}
+
+/* ======================================================
+   =============== RESPONSIVE FIX ========================
+   ====================================================== */
+
+@media (max-width: 480px) {
+
+    .content {
+        width: 96%;
+    }
+
+    header h1.judul {
+        font-size: 20px;
+    }
+
+    .menu ul li a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .login-box {
+        width: 90%;
+        padding: 20px;
+    }
+}

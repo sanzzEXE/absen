@@ -1,0 +1,126 @@
+/* 3pilihan.css */
+
+/* ===== Global ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;  /* lebar maksimal desktop */
+    width: 90%;          /* fleksibel untuk layar kecil */
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== Judul ===== */
+.container h2 {
+    text-align: center;
+    color: #0b6b5a;
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background-color: #0b6b5a;
+    color: #fff;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e6f2f1;
+}
+
+/* ===== Form Select ===== */
+select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/* ===== Tombol ===== */
+.btn-submit {
+    display: inline-block;
+    background-color: #0b6b5a;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #09493f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(11, 107, 90, 0.3);
+}
+
+/* ===== Link Kembali ===== */
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #0b6b5a;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #09493f;
+}
+.mpk-navbar-container{
+    color: seagreen;
+}
+
+/* ===== Flash Message ===== */
+.flash-msg {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: green;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+/* ===== Absensi search & table (moved from inline style in absensi.php) ===== */
+table.absensi-table{ width:100%; border-collapse:collapse; margin-top:10px }
+table.absensi-table th, table.absensi-table td{ padding:8px 10px; border:1px solid #eee; text-align:left }
